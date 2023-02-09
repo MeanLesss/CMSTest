@@ -35,9 +35,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="umbraco\Data\First_CMS.mdf" />
     <None Include="umbraco\Data\First_CMS.sqlite.db" />
     <None Include="umbraco\Data\First_CMS.sqlite.db-shm" />
     <None Include="umbraco\Data\First_CMS.sqlite.db-wal" />
+    <None Include="umbraco\Data\First_CMS_log.ldf" />
     <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments.gen" />
     <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\segments_8" />
     <None Include="umbraco\Data\TEMP\ExamineIndexes\ExternalIndex\write.lock" />
