@@ -542,6 +542,8 @@
     <None Include="umbraco\Data\TEMP\MediaCache\d\1\b\3\e\1\4\2\1d5c.meta" />
     <None Include="umbraco\Data\TEMP\NuCache\NuCache.Content.db" />
     <None Include="umbraco\Data\TEMP\NuCache\NuCache.Media.db" />
+    <None Include="umbraco\Data\Umbraco.mdf" />
+    <None Include="umbraco\Data\Umbraco_log.ldf" />
   </ItemGroup>
 
   <!-- Keep this as false if ModelsBuilder mode is InMemoryAuto -->
