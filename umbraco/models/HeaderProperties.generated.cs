@@ -18,29 +18,9 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	// Mixin Content Type with alias "headerProperties"
-	/// <summary>Header Properties</summary>
-	public partial interface IHeaderProperties : IPublishedElement
-	{
-		/// <summary>Main image</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.MediaWithCrops MainImage { get; }
-
-		/// <summary>Subtitle</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string SubTitle { get; }
-
-		/// <summary>Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Title { get; }
-	}
-
 	/// <summary>Header Properties</summary>
 	[PublishedModel("headerProperties")]
-	public partial class HeaderProperties : PublishedElementModel, IHeaderProperties
+	public partial class HeaderProperties : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -70,30 +50,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Main image
+		/// Main Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("mainImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MainImage => GetMainImage(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Main image</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetMainImage(IHeaderProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "mainImage");
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MainImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "mainImage");
 
 		///<summary>
-		/// Subtitle
+		/// Sub Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subTitle")]
-		public virtual string SubTitle => GetSubTitle(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Subtitle</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSubTitle(IHeaderProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "subTitle");
+		public virtual string SubTitle => this.Value<string>(_publishedValueFallback, "subTitle");
 
 		///<summary>
 		/// Title
@@ -101,11 +71,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("title")]
-		public virtual string Title => GetTitle(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.0.0+e3f4b86")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTitle(IHeaderProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "title");
+		public virtual string Title => this.Value<string>(_publishedValueFallback, "title");
 	}
 }
